@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .home{
-    @apply bg-gray-300;
+    @apply bg-zinc-300;
 }
 
 .footer{

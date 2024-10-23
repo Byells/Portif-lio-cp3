@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import notFoundtriste from "@/img/emogi_triste.png";
+import notFoundtriste from '../img/emogi-triste.png';
 
 export default function NotFound() {
   return (
