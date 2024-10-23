@@ -1,30 +1,29 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
-   <>
-  <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-6">
-      Home
-      </h1>
-
-      <div className=" md:grid-cols-2 gap-4 container flex justify-center">
-        {/* Aqui você pode adicionar componentes, listas ou qualquer outra funcionalidade */}
-        <div className="bg-gray-100 p-6 rounded-lg shadow-md: hover:bg-[#aeeaef] ">
-          <h2 className="text-xl font-semibold mb-2">Checkpoints</h2>
-          <p>Verificar Notas </p>
-        </div>
-
-        <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold mb-2">Challenge Sprint</h2>
-          <p>Vericar Notas</p>
-        </div>
-
-        <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold mb-2">Global Solutions</h2>
-          <p>Verificar Notas</p>
-        </div>
+    <div className="container mx-auto p-8">
+      <h1 className="text-4xl font-bold text-center mb-10 text-blue-600">Portfólio de Avaliações</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <Link href="/checkpoints">
+          <div className="bg-blue-500 text-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+            <h2 className="text-2xl font-bold">CheckPoints</h2>
+            <p>Avaliações intermediárias para acompanhamento do progresso.</p>
+          </div>
+        </Link>
+        <Link href="/globalsolution">
+          <div className="bg-green-500 text-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+            <h2 className="text-2xl font-bold">GlobalSolution</h2>
+            <p>Projetos integradores aplicando conhecimentos adquiridos.</p>
+          </div>
+        </Link>
+        <Link href="/challengersprints">
+          <div className="bg-red-500 text-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+            <h2 className="text-2xl font-bold">Challenger Sprints</h2>
+            <p>Desafios com foco em resolução de problemas.</p>
+          </div>
+        </Link>
       </div>
     </div>
-   </>
   );
 }
- 
