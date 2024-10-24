@@ -46,7 +46,7 @@ export default function cs() {
         />
         <button
           onClick={adicionarAluno}
-          className="bg-blue-500 text-white px-4 py-2 ml-2 rounded hover:bg-blue-700"
+          className="bg-red-500 text-white px-4 py-2 ml-2 rounded hover:bg-red-700"
         >
           Adicionar Aluno
         </button>
@@ -57,10 +57,10 @@ export default function cs() {
           <h2 className="text-xl font-semibold text-center">{aluno.nome}</h2>
           <div className="overflow-x-auto">
             <table className="min-w-full bg-gray-50 border border-gray-300">
-              <thead className="bg-blue-500 text-white">
+              <thead className="bg-red-500 text-white">
                 <tr>
                   <th className="px-4 py-2 border">Disciplina</th>
-                  <th className="px-4 py-2 border">CP</th>
+                  <th className="px-4 py-2 border">CS</th>
                 </tr>
               </thead>
               <tbody>
