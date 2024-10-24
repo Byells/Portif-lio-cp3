@@ -6,11 +6,3 @@ export interface Avaliacao {
     feedback: string;
   }
   
-
-  export type TipoAluno = {
-    id: number;
-    nome: string;
-    nota: number;
-
-
-  }

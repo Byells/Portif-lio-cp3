@@ -4,8 +4,8 @@ import Header from "@/components/Header/page";
 import Footer from "@/components/Footer/page";
 
 export const metadata: Metadata = {
-  title: "CP 3",
-  description: "Criação de um portifólio de nós alunos da FIAP",
+  title: "Portifólio Inicial",
+  description: "Criação de um portifólio do nosso grupo",
 };
 
 export default function RootLayout({
