@@ -6,7 +6,7 @@ export async function GET() {
     const file = await fs.readFile(process.cwd() + '/src/data/evaluations.json', 'utf-8');
 
     const evaluations: Avaliacao[] = JSON.parse(file);
-    
+
     return NextResponse.json(evaluations);
 }
 

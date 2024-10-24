@@ -13,7 +13,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
 export async function PUT(request: Request, { params }: { params: { id: string } }) {
     const file = await fs.readFile(process.cwd() + '/src/data/evaluations.json', 'utf-8');
     const evaluations: Avaliacao[] = JSON.parse(file);
-    const { titulo, nota, categoria, data, feedback } = await request.json(); // Alterado para 'titulo'
+    const { titulo, nota, categoria, data, feedback } = await request.json();
     const index = evaluations.findIndex(e => e.id === parseInt(params.id));
 
     if (index !== -1) {
