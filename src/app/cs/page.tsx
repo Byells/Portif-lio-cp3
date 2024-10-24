@@ -1,36 +1,80 @@
-'use client'
-import { useEffect, useState } from 'react';
-import { Sprint } from '@/types/types';
+"use client";
 
+import { useState } from 'react';
 
-  export default function ChallengerSprints() {
-    const [sprints, setSprints] = useState<Sprint[]>([]);
+type Aluno = {
+  id: number;
+  nome: string;
+  disciplinas: { nome: string; cp: number }[];
+};
+
+export default function cs() {
+  const [alunos, setAlunos] = useState<Aluno[]>([]);
+  const [nome, setNome] = useState('');
   
-    useEffect(() => {
-      const fetchSprints = async () => {
-        try {
-          const response = await fetch('/api/sprints/challengersprints');
-          const data = await response.json();
-          setSprints(data);
-        } catch (error) {
-          console.error('Erro ao buscar sprints:', error);
-        }
-      };
-      fetchSprints();
-    }, []);
-  
-    return (
-      <div className="container mx-auto p-8">
-        <h1 className="text-4xl font-bold mb-6 text-red-600">Challenger Sprints</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sprints.map((sprint) => (
-            <div key={sprint.id} className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h2 className="text-xl font-bold">{sprint.titulo}</h2>
-              <p className="mt-2">{sprint.descricao}</p>
-              <p className="mt-2 text-gray-700">Nota: {sprint.nota}</p>
-            </div>
-          ))}
-        </div>
+  const adicionarAluno = () => {
+    if (!nome) return; 
+
+    const novoAluno: Aluno = {
+      id: alunos.length + 1,
+      nome,
+      disciplinas: [
+        { nome: "Artificial Intelligence & Chatbot", cp: Math.floor(Math.random() * 100) },
+        { nome: "Building Relational Database", cp: Math.floor(Math.random() * 100) },
+        { nome: "Computational Thinking Using Python", cp: Math.floor(Math.random() * 100) },
+        { nome: "Domain Driven Design Using Java", cp: Math.floor(Math.random() * 100) },
+        { nome: "Front-End Design Engineering", cp: Math.floor(Math.random() * 100) },
+        { nome: "Software Engineering and Business Model", cp: Math.floor(Math.random() * 100) }
+      ]
+    };
+
+    setAlunos([...alunos, novoAluno]);
+    setNome(''); // Limpa o campo de entrada
+  };
+
+  return (
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold text-center mb-6">Notas Checkpoint</h1>
+
+      <div className="mb-4">
+        <input
+          type="text"
+          value={nome}
+          onChange={(e) => setNome(e.target.value)}
+          placeholder="Nome do aluno"
+          className="border p-2"
+        />
+        <button
+          onClick={adicionarAluno}
+          className="bg-blue-500 text-white px-4 py-2 ml-2 rounded hover:bg-blue-700"
+        >
+          Adicionar Aluno
+        </button>
       </div>
-    );
-  }
+
+      {alunos.map((aluno) => (
+        <div key={aluno.id} className="mb-6">
+          <h2 className="text-xl font-semibold text-center">{aluno.nome}</h2>
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-gray-50 border border-gray-300">
+              <thead className="bg-blue-500 text-white">
+                <tr>
+                  <th className="px-4 py-2 border">Disciplina</th>
+                  <th className="px-4 py-2 border">CP</th>
+                </tr>
+              </thead>
+              <tbody>
+                {aluno.disciplinas.map((disciplina, index) => (
+                  <tr key={index} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                    <td className="px-4 py-2 border">{disciplina.nome}</td>
+                    <td className="px-4 py-2 border text-center">{disciplina.cp}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
