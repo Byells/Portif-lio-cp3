@@ -34,7 +34,7 @@ export default function cs() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold text-center mb-6">Notas Checkpoint</h1>
+      <h1 className="text-2xl font-bold text-center mb-6">Notas Challenge Sprits</h1>
 
       <div className="mb-4">
         <input
