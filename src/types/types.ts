@@ -4,5 +4,4 @@ export interface Avaliacao {
     nota: number;
     data: string;
     feedback: string;
-  }
-  
+}
