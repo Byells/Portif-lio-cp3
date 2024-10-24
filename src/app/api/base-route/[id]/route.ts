@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { promises as fs } from "fs";
-import { Avaliacao } from "@/types";
+import { Avaliacao } from "@/types/types";
 
 
 // Função GET - Obter avaliação por ID

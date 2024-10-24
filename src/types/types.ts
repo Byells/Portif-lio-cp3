@@ -4,5 +4,13 @@ export interface Avaliacao {
     nota: number;
     data: string;
     feedback: string;
-  }
+}
+
+export interface Sprint {
+  id: number;
+  titulo: string;
+  descricao: string;
+  nota: number;
+}
+
   
