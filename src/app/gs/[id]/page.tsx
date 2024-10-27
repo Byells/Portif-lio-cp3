@@ -21,13 +21,13 @@ import useSWR from "swr";
 
 type Props = { params: { id: string } };
 const GsNotaId: NextPage<Props> = ({ params }) => {
-  const { data, isLoading, error } = useSWR<
+  const { data, isLoading, error, isValidating } = useSWR<
     { message: string } | { aluno: Aluno }
   >(`/api/alunos/${params.id}`, fetcher);
   if (error) {
     throw new Error(error);
   }
-  if (isLoading) {
+  if (isLoading || isValidating) {
     return "Carregando...";
   }
   if (!data || "message" in data) {

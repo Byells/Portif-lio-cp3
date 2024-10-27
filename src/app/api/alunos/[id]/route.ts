@@ -69,6 +69,7 @@ export const DELETE = async (
 
 export const PUT = async (req: Request, ctx: { params: { id: string } }) => {
   const form = await req.formData();
+  console.log(form);
   if (!form) {
     return NextResponse.json({ message: "invalid payload." }, { status: 400 });
   }
@@ -95,6 +96,7 @@ export const PUT = async (req: Request, ctx: { params: { id: string } }) => {
       await fs.readFile(caminho, { encoding: "utf8" }),
     );
     const alunoIdx = alunos.findIndex((aluno) => aluno.id === id);
+    console.log(alunoIdx);
     if (alunoIdx === -1) {
       return NextResponse.json(
         { message: "aluno não encontrado." },

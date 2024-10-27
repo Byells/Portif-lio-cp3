@@ -21,13 +21,13 @@ import useSWR from "swr";
 
 type Props = { params: { id: string } };
 const CsNotaId: NextPage<Props> = ({ params }) => {
-  const { data, isLoading, error } = useSWR<
+  const { data, isLoading, error, isValidating } = useSWR<
     { message: string } | { aluno: Aluno }
   >(`/api/alunos/${params.id}`, fetcher);
   if (error) {
     throw new Error(error);
   }
-  if (isLoading) {
+  if (isLoading || isValidating) {
     return "Carregando...";
   }
   if (!data || "message" in data) {
@@ -50,7 +50,7 @@ const CsNotaId: NextPage<Props> = ({ params }) => {
           </Link>
         </Button>
         <h1 className="text-2xl font-bold text-center">{title[key]}</h1>
-        <EditarAluno aluno={aluno} notaKey="cs"/>
+        <EditarAluno aluno={aluno} notaKey="cs" />
       </div>
       <div className="my-4">
         <span className="text-muted-foreground text-sm">Nome</span>
