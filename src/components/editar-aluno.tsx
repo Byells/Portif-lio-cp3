@@ -14,7 +14,6 @@ import type { Aluno, Disciplina, NotaKey } from "@/types/types";
 // import { useForm } from "react-hook-form";
 
 type Props = { aluno: Aluno; key: NotaKey };
-console.log("hi");
 
 export const EditarAluno: React.FC<Props> = ({ aluno, key }) => {
   // const form = useForm();
