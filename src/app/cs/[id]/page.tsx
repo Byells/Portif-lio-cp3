@@ -1,5 +1,5 @@
 "use client";
-import { EditarAluno } from "@/components/cp-page/editar-aluno";
+import { EditarAluno } from "@/components/editar-aluno";
 import { Button } from "@/components/ui/button";
 
 import {
@@ -50,7 +50,7 @@ const CsNotaId: NextPage<Props> = ({ params }) => {
           </Link>
         </Button>
         <h1 className="text-2xl font-bold text-center">{title[key]}</h1>
-        <EditarAluno aluno={aluno} />
+        <EditarAluno aluno={aluno} key="cs"/>
       </div>
       <div className="my-4">
         <span className="text-muted-foreground text-sm">Nome</span>
