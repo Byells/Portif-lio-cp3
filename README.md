@@ -3,6 +3,7 @@
 - Cauã Marcelo da Silva Machado RM: 558024
 - Gabriel Lima Silva RM: 556773
 - Gustavo Patrício Borba RM: 559202
+- Leonardo Matheus Teixeira RM: 556629
 
 
 # Portfólio 

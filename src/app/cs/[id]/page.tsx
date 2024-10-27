@@ -44,7 +44,7 @@ const CsNotaId: NextPage<Props> = ({ params }) => {
     <div className="container mx-auto p-4">
       <div className="flex items-center content-between justify-between">
         <Button asChild className="w-fit" variant="link">
-          <Link href="/cp">
+          <Link href="/cs">
             <ArrowLeft />
             Voltar
           </Link>
