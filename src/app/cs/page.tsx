@@ -8,7 +8,7 @@ type Aluno = {
   disciplinas: { nome: string; cs: number }[];
 };
 
-export default function cs() {
+export default function Cs() {
   const alunosFixos: Aluno[] = [
     { id: 1, nome: "Cauã Marcelo", disciplinas: [
         { nome: "Artificial Intelligence & Chatbot", cs: 100 },
