@@ -2,9 +2,9 @@ import { store } from "@/db";
 import { EditarAlunoSchema } from "@/payloads/editar-aluno";
 import type { Aluno } from "@/types/types";
 import { isCuid } from "@paralleldrive/cuid2";
-import { existsSync, promises as fs } from "fs";
+// import { existsSync, promises as fs } from "fs";
 import { NextRequest, NextResponse } from "next/server";
-import path from "path";
+// import path from "path";
 import { safeParse } from "valibot";
 
 export const GET = async (_: NextRequest, ctx: { params: { id: string } }) => {
@@ -15,11 +15,11 @@ export const GET = async (_: NextRequest, ctx: { params: { id: string } }) => {
       { status: 404 },
     );
   }
-  const caminho: string = path.join(process.cwd(), "database", "alunos.json");
+  // const caminho: string = path.join(process.cwd(), "database", "alunos.json");
   try {
-    if (!existsSync(caminho)) {
-      await fs.writeFile(caminho, "[]");
-    }
+    // if (!existsSync(caminho)) {
+    //   await fs.writeFile(caminho, "[]");
+    // }
     // const alunos: Aluno[] = JSON.parse(
     //   await fs.readFile(caminho, { encoding: "utf8" }),
     // );
@@ -51,15 +51,14 @@ export const DELETE = async (
       { status: 404 },
     );
   }
-  const caminho: string = path.join(process.cwd(), "database", "alunos.json");
+  // const caminho: string = path.join(process.cwd(), "database", "alunos.json");
   try {
-    if (!existsSync(caminho)) {
-      await fs.writeFile(caminho, "[]");
-    }
+    // if (!existsSync(caminho)) {
+    //   await fs.writeFile(caminho, "[]");
+    // }
     // const alunos: Aluno[] = JSON.parse(
     //   await fs.readFile(caminho, { encoding: "utf8" }),
     // );
-
     //CONTINUAR
   } catch (e) {
     if (e instanceof Error) {
@@ -88,11 +87,11 @@ export const PUT = async (req: Request, ctx: { params: { id: string } }) => {
       { status: 404 },
     );
   }
-  const caminho: string = path.join(process.cwd(), "database", "alunos.json");
+  // const caminho: string = path.join(process.cwd(), "database", "alunos.json");
   try {
-    if (!existsSync(caminho)) {
-      await fs.writeFile(caminho, "[]");
-    }
+    // if (!existsSync(caminho)) {
+    //   await fs.writeFile(caminho, "[]");
+    // }
     // const alunos: Aluno[] = JSON.parse(
     //   await fs.readFile(caminho, { encoding: "utf8" }),
     // );

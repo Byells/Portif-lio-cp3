@@ -1,9 +1,9 @@
 import { NovoAlunoSchema } from "@/payloads/novo-aluno";
 import { createId } from "@paralleldrive/cuid2";
 import type { Aluno } from "@/types/types";
-import { promises as fs, existsSync } from "fs";
+// import { promises as fs, existsSync } from "fs";
 import { NextResponse } from "next/server";
-import path from "path";
+// import path from "path";
 import { safeParse } from "valibot";
 import { store } from "@/db";
 
@@ -33,15 +33,16 @@ export const POST = async (r: Request) => {
   }
   const data = body.output;
   try {
-    const caminho = path.join(process.cwd(), "database", "alunos.json");
-    if (!existsSync(caminho)) {
-      await fs.writeFile(caminho, "[]");
-    }
+    // const caminho = path.join(process.cwd(), "database", "alunos.json");
+    // if (!existsSync(caminho)) {
+    //   await fs.writeFile(caminho, "[]");
+    // }
     // const alunos: Aluno[] = JSON.parse(
     //   await fs.readFile(caminho, { encoding: "utf8" }),
     // );
 
-    const { addNovoAluno } = store.getState();
+    const { addNovoAluno, alunos } = store.getState();
+    console.log(alunos);
     addNovoAluno({
       id: createId(),
       nome: data.nome,
