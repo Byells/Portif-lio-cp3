@@ -11,13 +11,10 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import type { Aluno, Disciplina, NotaKey } from "@/types/types";
-// import { useForm } from "react-hook-form";
 
-type Props = { aluno: Aluno; key: NotaKey };
+type Props = { aluno: Aluno; notaKey: NotaKey };
 
-export const EditarAluno: React.FC<Props> = ({ aluno, key }) => {
-  // const form = useForm();
-  console.log(aluno.disciplinas, key);
+export const EditarAluno: React.FC<Props> = ({ aluno, notaKey }) => {
   return (
     <form>
       <Dialog>
@@ -44,7 +41,7 @@ export const EditarAluno: React.FC<Props> = ({ aluno, key }) => {
               />
             </div>
             {aluno.disciplinas.map<React.ReactNode>((disciplina) =>
-              key in disciplina ? (
+              notaKey in disciplina ? (
                 <div
                   key={disciplina.nome}
                   className="grid grid-cols-4 items-center gap-4"
@@ -56,7 +53,7 @@ export const EditarAluno: React.FC<Props> = ({ aluno, key }) => {
                     name={disciplina.nome}
                     id={disciplina.nome}
                     defaultValue={
-                      disciplina[key as unknown as keyof Disciplina]
+                      disciplina[notaKey as unknown as keyof Disciplina]
                     }
                     className="col-span-3"
                   />

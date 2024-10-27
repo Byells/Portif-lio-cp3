@@ -7,13 +7,11 @@ import useSWR from "swr";
 import { Button } from "@/components/ui/button";
 
 export const AlunosList: React.FC<{ notaKey: NotaKey }> = ({ notaKey }) => {
-  console.log("key", notaKey);
   const {
     data: alunos,
     error,
     isLoading,
   } = useSWR<Aluno[]>("/api/alunos", fetcher, {
-    suspense: true,
     fallbackData: [],
   });
   if (error || !alunos) throw new Error(error);

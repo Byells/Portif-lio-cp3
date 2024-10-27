@@ -44,13 +44,13 @@ const GsNotaId: NextPage<Props> = ({ params }) => {
     <div className="container mx-auto p-4">
       <div className="flex items-center content-between justify-between">
         <Button asChild className="w-fit" variant="link">
-          <Link href="/cp">
+          <Link href={`/gs`}>
             <ArrowLeft />
             Voltar
           </Link>
         </Button>
         <h1 className="text-2xl font-bold text-center">{title[key]}</h1>
-        <EditarAluno aluno={aluno} key="gs"/>
+        <EditarAluno aluno={aluno} notaKey="gs" />
       </div>
       <div className="my-4">
         <span className="text-muted-foreground text-sm">Nome</span>
