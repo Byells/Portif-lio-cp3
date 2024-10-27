@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 type Aluno = {
   id: number;
@@ -54,12 +54,12 @@ export default function Cs() {
       id: alunos.length + 1,
       nome,
       disciplinas: [
-        { nome: "Artificial Intelligence & Chatbot", cp: Math.floor(Math.random() * 100) },
-        { nome: "Building Relational Database", cp: Math.floor(Math.random() * 100) },
-        { nome: "Computational Thinking Using Python", cp: Math.floor(Math.random() * 100) },
-        { nome: "Domain Driven Design Using Java", cp: Math.floor(Math.random() * 100) },
-        { nome: "Front-End Design Engineering", cp: Math.floor(Math.random() * 100) },
-        { nome: "Software Engineering and Business Model", cp: Math.floor(Math.random() * 100) }
+        { nome: "Artificial Intelligence & Chatbot", cs: Math.floor(Math.random() * 100) },
+        { nome: "Building Relational Database", cs: Math.floor(Math.random() * 100) },
+        { nome: "Computational Thinking Using Python", cs: Math.floor(Math.random() * 100) },
+        { nome: "Domain Driven Design Using Java", cs: Math.floor(Math.random() * 100) },
+        { nome: "Front-End Design Engineering", cs: Math.floor(Math.random() * 100) },
+        { nome: "Software Engineering and Business Model", cs: Math.floor(Math.random() * 100) }
       ]
     };
 
@@ -102,7 +102,7 @@ export default function Cs() {
                 {aluno.disciplinas.map((disciplina, index) => (
                   <tr key={index} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
                     <td className="px-4 py-2 border">{disciplina.nome}</td>
-                    <td className="px-4 py-2 border text-center">{disciplina.cp}</td>
+                    <td className="px-4 py-2 border text-center">{disciplina.cs}</td>
                   </tr>
                 ))}
               </tbody>

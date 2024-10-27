@@ -67,7 +67,7 @@ export default function Cp() {
     };
 
     setAlunos([...alunos, novoAluno]);
-    setNome(''); // Limpa o campo de entrada
+    setNome(''); 
   };
 
   return (
