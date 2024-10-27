@@ -29,7 +29,7 @@ export const AlunosList: React.FC = () => {
     <div className="grid gap-2 md:justify-items-start">
       {alunos.map((aluno) => (
         <Button key={aluno.id} asChild variant="link" className="text-base">
-          <Link href="#">
+          <Link href={`cp/${aluno.id}`}>
             <h2>{aluno.nome}</h2>
           </Link>
         </Button>
