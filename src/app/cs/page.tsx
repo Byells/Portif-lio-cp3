@@ -5,11 +5,46 @@ import { useState } from 'react';
 type Aluno = {
   id: number;
   nome: string;
-  disciplinas: { nome: string; cp: number }[];
+  disciplinas: { nome: string; cs: number }[];
 };
 
 export default function cs() {
-  const [alunos, setAlunos] = useState<Aluno[]>([]);
+  const alunosFixos: Aluno[] = [
+    { id: 1, nome: "Cauã Marcelo", disciplinas: [
+        { nome: "Artificial Intelligence & Chatbot", cs: 100 },
+        { nome: "Building Relational Database", cs: 100 },
+        { nome: "Computational Thinking Using Python", cs: 100 },
+        { nome: "Domain Driven Design Using Java", cs: 100 },
+        { nome: "Front-End Design Engineering", cs: 100  },
+        { nome: "Software Engineering and Business Model", cs: 100  }
+    ]},
+    { id: 2, nome: "Gabriel Lima", disciplinas: [
+      { nome: "Artificial Intelligence & Chatbot", cs: 100 },
+      { nome: "Building Relational Database", cs: 100 },
+      { nome: "Computational Thinking Using Python", cs: 100 },
+      { nome: "Domain Driven Design Using Java", cs: 100 },
+      { nome: "Front-End Design Engineering", cs: 100  },
+      { nome: "Software Engineering and Business Model", cs: 100  }
+    ] },
+    { id: 3, nome: "Gustavo Borba", disciplinas: [
+      { nome: "Artificial Intelligence & Chatbot", cs: 100 },
+      { nome: "Building Relational Database", cs: 100 },
+      { nome: "Computational Thinking Using Python", cs: 100 },
+      { nome: "Domain Driven Design Using Java", cs: 100 },
+      { nome: "Front-End Design Engineering", cs: 100  },
+      { nome: "Software Engineering and Business Model", cs: 100  }
+    ] },
+    { id: 4, nome: "Leonardo Matheus", disciplinas: [
+      { nome: "Artificial Intelligence & Chatbot", cs: 100 },
+      { nome: "Building Relational Database", cs: 100 },
+      { nome: "Computational Thinking Using Python", cs: 100 },
+      { nome: "Domain Driven Design Using Java", cs: 100 },
+      { nome: "Front-End Design Engineering", cs: 100  },
+      { nome: "Software Engineering and Business Model", cs: 100  }
+    ] },
+  ];
+
+  const [alunos, setAlunos] = useState<Aluno[]>(alunosFixos);
   const [nome, setNome] = useState('');
   
   const adicionarAluno = () => {
@@ -29,7 +64,7 @@ export default function cs() {
     };
 
     setAlunos([...alunos, novoAluno]);
-    setNome(''); // Limpa o campo de entrada
+    setNome(''); 
   };
 
   return (

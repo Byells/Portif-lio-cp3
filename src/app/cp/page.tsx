@@ -9,7 +9,45 @@ type Aluno = {
 };
 
 export default function cp() {
-  const [alunos, setAlunos] = useState<Aluno[]>([]);
+  const alunosFixos: Aluno[] = [
+    { id: 1, nome: "Cauã Marcelo", disciplinas: [
+        { nome: "Artificial Intelligence & Chatbot", cp: 100 },
+        { nome: "Building Relational Database", cp: 100 },
+        { nome: "Computational Thinking Using Python", cp: 100 },
+        { nome: "Domain Driven Design Using Java", cp: 100 },
+        { nome: "Front-End Design Engineering", cp: 100  },
+        { nome: "Software Engineering and Business Model", cp: 100  }
+    ]},
+    { id: 2, nome: "Gabriel Lima", disciplinas: [
+      { nome: "Artificial Intelligence & Chatbot", cp: 100 },
+      { nome: "Building Relational Database", cp: 100 },
+      { nome: "Computational Thinking Using Python", cp: 100 },
+      { nome: "Domain Driven Design Using Java", cp: 100 },
+      { nome: "Front-End Design Engineering", cp: 100  },
+      { nome: "Software Engineering and Business Model", cp: 100  }
+    ] },
+    { id: 3, nome: "Gustavo Borba", disciplinas: [
+      { nome: "Artificial Intelligence & Chatbot", cp: 100 },
+      { nome: "Building Relational Database", cp: 100 },
+      { nome: "Computational Thinking Using Python", cp: 100 },
+      { nome: "Domain Driven Design Using Java", cp: 100 },
+      { nome: "Front-End Design Engineering", cp: 100  },
+      { nome: "Software Engineering and Business Model", cp: 100  }
+    ] },
+    { id: 4, nome: "Leonardo Matheus", disciplinas: [
+      { nome: "Artificial Intelligence & Chatbot", cp: 100 },
+      { nome: "Building Relational Database", cp: 100 },
+      { nome: "Computational Thinking Using Python", cp: 100 },
+      { nome: "Domain Driven Design Using Java", cp: 100 },
+      { nome: "Front-End Design Engineering", cp: 100  },
+      { nome: "Software Engineering and Business Model", cp: 100  }
+    ] },
+  ];
+
+
+
+
+  const [alunos, setAlunos] = useState<Aluno[]>(alunosFixos);
   const [nome, setNome] = useState('');
   
   const adicionarAluno = () => {
