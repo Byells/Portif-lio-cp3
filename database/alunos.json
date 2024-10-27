@@ -1,0 +1,43 @@
+[
+  {
+    "nome": "bielzote",
+    "disciplinas": [
+      {
+        "nome": "Artificial Intelligence & Chatbot",
+        "cs": 100,
+        "cp": 100,
+        "gs": 100
+      },
+      {
+        "nome": "Building Relational Database",
+        "cs": 100,
+        "cp": 100,
+        "gs": 100
+      },
+      {
+        "nome": "Computational Thinking Using Python",
+        "cs": 100,
+        "cp": 100,
+        "gs": 100
+      },
+      {
+        "nome": "Domain Driven Design Using Java",
+        "cs": 100,
+        "cp": 100,
+        "gs": 100
+      },
+      {
+        "nome": "Front-End Design Engineering",
+        "cs": 100,
+        "cp": 100,
+        "gs": 100
+      },
+      {
+        "nome": "Software Engineering and Business Model",
+        "cs": 100,
+        "cp": 100,
+        "gs": 100
+      }
+    ]
+  }
+]
