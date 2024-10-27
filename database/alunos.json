@@ -1,170 +1,170 @@
 [
-    {
-        "id": "gs1tfrcfj9qdv2kjd4wc3f2b",
-        "nome": "Cauã Marcelo",
-        "disciplinas": [
-            {
-                "nome": "Artificial Intelligence & Chatbot",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Building Relational Database",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Computational Thinking Using Python",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Domain Driven Design Using Java",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Front-End Design Engineering",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Software Engineering and Business Model",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            }
-        ]
-    },
-    {
-        "id": "n7y9lf8sp2ewlxvp46syux09",
-        "nome": "Gabriel Lima Silva",
-        "disciplinas": [
-            {
-                "nome": "Artificial Intelligence & Chatbot",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Building Relational Database",
-                "cs": 100,
-                "gs": 100,
-                "cp": 97.5
-            },
-            {
-                "nome": "Computational Thinking Using Python",
-                "cs": 100,
-                "gs": 100,
-                "cp": 96.5
-            },
-            {
-                "nome": "Domain Driven Design Using Java",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Front-End Design Engineering",
-                "cs": 100,
-                "gs": 100,
-                "cp": 60
-            },
-            {
-                "nome": "Software Engineering and Business Model",
-                "cs": 100,
-                "gs": 100,
-                "cp": 62.5
-            }
-        ]
-    },
-    {
-        "id": "rmtcgh3g35w9ym5555ex0zgx",
-        "nome": "Gustavo Borba",
-        "disciplinas": [
-            {
-                "nome": "Artificial Intelligence & Chatbot",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Building Relational Database",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Computational Thinking Using Python",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Domain Driven Design Using Java",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Front-End Design Engineering",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Software Engineering and Business Model",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            }
-        ]
-    },
-    {
-        "id": "gqzcas430wr6llxnlms9dmbs",
-        "nome": "Leonardo Matheus",
-        "disciplinas": [
-            {
-                "nome": "Artificial Intelligence & Chatbot",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Building Relational Database",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Computational Thinking Using Python",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Domain Driven Design Using Java",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Front-End Design Engineering",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            },
-            {
-                "nome": "Software Engineering and Business Model",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
-            }
-        ]
-    }
+  {
+    "id": "gs1tfrcfj9qdv2kjd4wc3f2b",
+    "nome": "Cauã Marcelo",
+    "disciplinas": [
+      {
+        "nome": "Artificial Intelligence & Chatbot",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Building Relational Database",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Computational Thinking Using Python",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Domain Driven Design Using Java",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Front-End Design Engineering",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Software Engineering and Business Model",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      }
+    ]
+  },
+  {
+    "id": "n7y9lf8sp2ewlxvp46syux09",
+    "nome": "Gabriel Lima Silva",
+    "disciplinas": [
+      {
+        "nome": "Artificial Intelligence & Chatbot",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Building Relational Database",
+        "cs": 100,
+        "gs": 100,
+        "cp": 97.5
+      },
+      {
+        "nome": "Computational Thinking Using Python",
+        "cs": 100,
+        "gs": 100,
+        "cp": 96.5
+      },
+      {
+        "nome": "Domain Driven Design Using Java",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Front-End Design Engineering",
+        "cs": 100,
+        "gs": 100,
+        "cp": 60
+      },
+      {
+        "nome": "Software Engineering and Business Model",
+        "cs": 100,
+        "gs": 100,
+        "cp": 62.5
+      }
+    ]
+  },
+  {
+    "id": "rmtcgh3g35w9ym5555ex0zgx",
+    "nome": "Gustavo Borba",
+    "disciplinas": [
+      {
+        "nome": "Artificial Intelligence & Chatbot",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Building Relational Database",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Computational Thinking Using Python",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Domain Driven Design Using Java",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Front-End Design Engineering",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Software Engineering and Business Model",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      }
+    ]
+  },
+  {
+    "id": "gqzcas430wr6llxnlms9dmbs",
+    "nome": "Leonardo Matheus",
+    "disciplinas": [
+      {
+        "nome": "Artificial Intelligence & Chatbot",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Building Relational Database",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Computational Thinking Using Python",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Domain Driven Design Using Java",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Front-End Design Engineering",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      },
+      {
+        "nome": "Software Engineering and Business Model",
+        "cs": 100,
+        "gs": 100,
+        "cp": 100
+      }
+    ]
+  }
 ]
