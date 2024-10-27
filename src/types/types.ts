@@ -7,7 +7,7 @@ export interface Avaliacao {
 }
 
 export type Aluno = {
-  id: number;
+  id: string;
   nome: string;
   disciplinas: ({ nome: string } & (
     | { cp: number }
