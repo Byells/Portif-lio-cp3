@@ -6,6 +6,7 @@ export const NovoAluno: React.FC = () => {
         required
         placeholder="Nome do aluno"
         className="border p-2"
+        minLength={1}
       />
       <button
         type="submit"
