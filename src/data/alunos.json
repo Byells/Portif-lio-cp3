@@ -1,0 +1,35 @@
+
+
+[
+    {
+      "id": 1,
+      "nome": "Gustavo Borba",
+      "notas": {
+        "cp": [
+          { "disciplina": "Artificial Intelligence & Chatbot", "nota": 80 },
+          { "disciplina": "Building Relational Database", "nota": 70 },
+          { "disciplina": "Computational Thinking Using Python", "nota": 85 },
+          { "disciplina": "Domain Driven Design Using Java", "nota": 78 },
+          { "disciplina": "Front-End Design Engineering", "nota": 90 },
+          { "disciplina": "Software Engineering and Business Model", "nota": 75 }
+        ],
+        "gs": [
+          { "disciplina": "Artificial Intelligence & Chatbot", "nota": 82 },
+          { "disciplina": "Building Relational Database", "nota": 68 },
+          { "disciplina": "Computational Thinking Using Python", "nota": 88 },
+          { "disciplina": "Domain Driven Design Using Java", "nota": 74 },
+          { "disciplina": "Front-End Design Engineering", "nota": 92 },
+          { "disciplina": "Software Engineering and Business Model", "nota": 76 }
+        ],
+        "cs": [
+          { "disciplina": "Artificial Intelligence & Chatbot", "nota": 85 },
+          { "disciplina": "Building Relational Database", "nota": 71 },
+          { "disciplina": "Computational Thinking Using Python", "nota": 90 },
+          { "disciplina": "Domain Driven Design Using Java", "nota": 77 },
+          { "disciplina": "Front-End Design Engineering", "nota": 95 },
+          { "disciplina": "Software Engineering and Business Model", "nota": 79 }
+        ]
+      }
+    }
+  ]
+  

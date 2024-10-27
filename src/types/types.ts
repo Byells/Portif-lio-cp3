@@ -1,7 +1,14 @@
-export interface Avaliacao {
+// types/tipo.ts
+
+export interface Disciplina {
+    nome: string;
+    cp: number;
+  }
+  
+  export interface Aluno {
     id: number;
-    categoria: string; // CheckPoints, GlobalSolution, Challenger Sprints
-    nota: number;
-    data: string;
-    feedback: string;
-}
+    nome: string;
+    disciplinas: Disciplina[];
+  }
+  
+ 
