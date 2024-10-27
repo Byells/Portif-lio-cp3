@@ -1,8 +1,8 @@
 "use client";
 import { Aluno } from "@/types/types";
 import { fetcher } from "@/utils/fetcher";
+import { Loader } from "lucide-react";
 import useSWR from "swr";
-import { Button } from "../ui/button";
 
 export const AlunosList: React.FC = () => {
   const {
@@ -15,7 +15,12 @@ export const AlunosList: React.FC = () => {
   });
   if (error || !alunos) throw new Error(error);
   if (isLoading) {
-    return "Carregando...";
+    return (
+      <div className="inline-flex gap-4">
+        <Loader className="animate-spin" />
+        Carregando...
+      </div>
+    );
   }
 
   return (

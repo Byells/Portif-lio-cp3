@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header/page";
-import Footer from "@/components/Footer/page";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Portifólio Inicial",
@@ -17,9 +17,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className="flex flex-col min-h-screen">
         <Header />
-        <main className=" home flex-grow ">
-          {children}
-        </main>
+        <main className="bg-zinc-300 flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
