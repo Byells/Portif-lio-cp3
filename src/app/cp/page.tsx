@@ -1,8 +1,7 @@
 "use client";
 import { Aluno } from "@/types/types";
+import { fetcher } from "@/utils/fetcher";
 import useSWR from "swr";
-
-const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
 export default function Cp() {
   const { data: alunos = [], error } = useSWR<Aluno[]>("/api/alunos", fetcher);
