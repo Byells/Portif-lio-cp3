@@ -34,7 +34,7 @@ const GsNotaId: NextPage<Props> = ({ params }) => {
     return redirect("/not-found");
   }
   const aluno: Aluno = data.aluno;
-  const key: NotaKey = "cp";
+  const key: NotaKey = "gs";
   const title: Record<NotaKey, string> = {
     cp: "Check Points",
     cs: "Challenger Sprints",
