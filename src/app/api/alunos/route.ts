@@ -5,7 +5,6 @@ import { promises as fs, existsSync } from "fs";
 import { NextResponse } from "next/server";
 import path from "path";
 import { safeParse } from "valibot";
-import { redirect } from "next/navigation";
 
 export const GET = async () => {
   try {
