@@ -1,6 +1,6 @@
 import { NovoAlunoSchema } from "@/payloads/novo-aluno";
 import { createId } from "@paralleldrive/cuid2";
-import { Aluno } from "@/types/types";
+import type { Aluno } from "@/types/types";
 import { promises as fs, existsSync } from "fs";
 import { NextResponse } from "next/server";
 import path from "path";
