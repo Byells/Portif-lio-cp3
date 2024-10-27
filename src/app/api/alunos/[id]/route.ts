@@ -54,9 +54,9 @@ export const DELETE = async (
     if (!existsSync(caminho)) {
       await fs.writeFile(caminho, "[]");
     }
-    const alunos: Aluno[] = JSON.parse(
-      await fs.readFile(caminho, { encoding: "utf8" }),
-    );
+    // const alunos: Aluno[] = JSON.parse(
+    //   await fs.readFile(caminho, { encoding: "utf8" }),
+    // );
 
     //CONTINUAR
   } catch (e) {

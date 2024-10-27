@@ -13,7 +13,6 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import type { Aluno, Disciplina, NotaKey } from "@/types/types";
 import type { FormEventHandler } from "react";
-import useSWRMutation from "swr/mutation";
 import { useSWRConfig } from "swr";
 
 type Props = { aluno: Aluno; notaKey: NotaKey };
