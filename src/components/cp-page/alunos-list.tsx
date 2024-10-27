@@ -2,7 +2,9 @@
 import { Aluno } from "@/types/types";
 import { fetcher } from "@/utils/fetcher";
 import { Loader } from "lucide-react";
+import Link from "next/link";
 import useSWR from "swr";
+import { Button } from "../ui/button";
 
 export const AlunosList: React.FC = () => {
   const {
@@ -24,14 +26,13 @@ export const AlunosList: React.FC = () => {
   }
 
   return (
-    <div className="grid gap-2 justify-items-start">
+    <div className="grid gap-2 md:justify-items-start">
       {alunos.map((aluno) => (
-        <button
-          key={aluno.id}
-          className="border border-border p-4 rounded-md bg-background min-w-[320px]"
-        >
-          <h2>{aluno.nome}</h2>
-        </button>
+        <Button key={aluno.id} asChild variant="link" className="text-base">
+          <Link href="#">
+            <h2>{aluno.nome}</h2>
+          </Link>
+        </Button>
       ))}
     </div>
   );
