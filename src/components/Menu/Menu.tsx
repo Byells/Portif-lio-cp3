@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from "next/link";
 
-
 export default function Menu() {
   return (
    <div className="container mx-auto p-8">
