@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import { Aluno } from "@/types/types";
 import { fetcher } from "@/utils/fetcher";
 import { ArrowLeft } from "lucide-react";
@@ -26,9 +27,12 @@ const CpNotaId: NextPage<Props> = ({ params }) => {
   return (
     <div className="container mx-auto p-4">
       <div className="grid grid-cols-3">
-        <Link href="/cp">
-          <ArrowLeft />
-        </Link>
+        <Button asChild className="w-fit" variant="link">
+          <Link href="/cp">
+            <ArrowLeft />
+            Voltar
+          </Link>
+        </Button>
         <h1 className="text-2xl font-bold text-center mb-6">{aluno.nome}</h1>
       </div>
       <h2 className="mx-auto text-center">Notas</h2>
