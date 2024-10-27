@@ -1,12 +1,6 @@
-"use client";
-import { Aluno } from "@/types/types";
-import { fetcher } from "@/utils/fetcher";
-import useSWR from "swr";
+import { AlunosList } from "@/components/cp-page/alunos-list";
 
 export default function Cp() {
-  const { data: alunos = [], error } = useSWR<Aluno[]>("/api/alunos", fetcher);
-  if (error) throw new Error(error);
-
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold text-center mb-6">Notas Checkpoint</h1>
@@ -18,11 +12,7 @@ export default function Cp() {
         </button>
       </div>
 
-      {alunos.map((aluno) => (
-        <div key={aluno.id} className="mb-6">
-          <h2 className="text-xl font-semibold text-center">{aluno.nome}</h2>
-        </div>
-      ))}
+      <AlunosList />
     </div>
   );
 }

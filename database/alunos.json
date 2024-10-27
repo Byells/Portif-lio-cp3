@@ -39,5 +39,9 @@
         "gs": 100
       }
     ]
+  },
+  {
+    "nome": "outro aluno",
+    "disciplinas": []
   }
 ]
