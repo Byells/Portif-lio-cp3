@@ -32,3 +32,14 @@ export const GET = async (
     return new Response("error", { status: 500 });
   }
 };
+
+export const DELETE = async (
+  req: NextRequest,
+  ctx: { params: { id: string } },
+) => {
+  const id = ctx.params.id;
+  if (!id || !isCuid(id)) {
+    return NextResponse.json({ message: "aluno not found" }, { status: 404 });
+  }
+  // ... Continuar o código
+};
