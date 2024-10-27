@@ -60,7 +60,7 @@ export default function gs() {
               <thead className="bg-green-500 text-white">
                 <tr>
                   <th className="px-4 py-2 border">Disciplina</th>
-                  <th className="px-4 py-2 border">CS</th>
+                  <th className="px-4 py-2 border">GS</th>
                 </tr>
               </thead>
               <tbody>
