@@ -50,7 +50,7 @@ const CsNotaId: NextPage<Props> = ({ params }) => {
           </Link>
         </Button>
         <h1 className="text-2xl font-bold text-center">{title[key]}</h1>
-        <EditarAluno aluno={aluno} key="cs"/>
+        <EditarAluno aluno={aluno} notaKey="cs"/>
       </div>
       <div className="my-4">
         <span className="text-muted-foreground text-sm">Nome</span>
