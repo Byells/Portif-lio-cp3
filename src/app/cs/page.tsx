@@ -1,5 +1,5 @@
 import { AlunosList } from "@/components/alunos-list";
-import { NovoAluno } from "@/components/cp-page/novo-aluno";
+import { NovoAluno } from "@/components/novo-aluno";
 import type { NextPage } from "next";
 
 const CsPage: NextPage = () => {
@@ -8,7 +8,7 @@ const CsPage: NextPage = () => {
       <h1 className="text-2xl font-bold text-center mb-6">
         Notas Challenge Sprints
       </h1>
-      <NovoAluno />
+      <NovoAluno notaKey="cs" />
       <AlunosList notaKey="cs" />
     </div>
   );

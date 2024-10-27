@@ -1,5 +1,5 @@
 import { AlunosList } from "@/components/alunos-list";
-import { NovoAluno } from "@/components/cp-page/novo-aluno";
+import { NovoAluno } from "@/components/novo-aluno";
 
 const GsPage = () => {
   return (
@@ -7,7 +7,7 @@ const GsPage = () => {
       <h1 className="text-2xl font-bold text-center mb-6">
         Notas Global Solution
       </h1>
-      <NovoAluno />
+      <NovoAluno notaKey="gs" />
       <AlunosList notaKey="gs" />
     </div>
   );

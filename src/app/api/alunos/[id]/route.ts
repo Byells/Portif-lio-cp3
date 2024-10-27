@@ -1,3 +1,4 @@
+import { store } from "@/db";
 import { EditarAlunoSchema } from "@/payloads/editar-aluno";
 import type { Aluno } from "@/types/types";
 import { isCuid } from "@paralleldrive/cuid2";
@@ -19,9 +20,10 @@ export const GET = async (_: NextRequest, ctx: { params: { id: string } }) => {
     if (!existsSync(caminho)) {
       await fs.writeFile(caminho, "[]");
     }
-    const alunos: Aluno[] = JSON.parse(
-      await fs.readFile(caminho, { encoding: "utf8" }),
-    );
+    // const alunos: Aluno[] = JSON.parse(
+    //   await fs.readFile(caminho, { encoding: "utf8" }),
+    // );
+    const { alunos } = store.getState();
     const aluno: Aluno | undefined = alunos.find((item) => item.id === id);
     if (!aluno) {
       return NextResponse.json(
@@ -69,7 +71,6 @@ export const DELETE = async (
 
 export const PUT = async (req: Request, ctx: { params: { id: string } }) => {
   const form = await req.formData();
-  console.log(form);
   if (!form) {
     return NextResponse.json({ message: "invalid payload." }, { status: 400 });
   }
@@ -92,11 +93,11 @@ export const PUT = async (req: Request, ctx: { params: { id: string } }) => {
     if (!existsSync(caminho)) {
       await fs.writeFile(caminho, "[]");
     }
-    const alunos: Aluno[] = JSON.parse(
-      await fs.readFile(caminho, { encoding: "utf8" }),
-    );
+    // const alunos: Aluno[] = JSON.parse(
+    //   await fs.readFile(caminho, { encoding: "utf8" }),
+    // );
+    const { alunos, setAlunos } = store.getState();
     const alunoIdx = alunos.findIndex((aluno) => aluno.id === id);
-    console.log(alunoIdx);
     if (alunoIdx === -1) {
       return NextResponse.json(
         { message: "aluno não encontrado." },
@@ -116,7 +117,8 @@ export const PUT = async (req: Request, ctx: { params: { id: string } }) => {
       };
     });
     alunos[alunoIdx] = aluno;
-    await fs.writeFile(caminho, JSON.stringify(alunos, null, 4));
+    // await fs.writeFile(caminho, JSON.stringify(alunos, null, 4));
+    setAlunos(alunos);
     return NextResponse.json(null);
   } catch (e) {
     if (e instanceof Error) {
