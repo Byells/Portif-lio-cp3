@@ -1,73 +1,99 @@
 "use client";
 
-import React, { useState } from 'react';
-
-type Aluno = {
-  id: number;
-  nome: string;
-  disciplinas: { nome: string; cp: number }[];
-};
+import { Aluno } from "@/types/types";
+import React, { useState } from "react";
 
 export default function Cp() {
   const alunosFixos: Aluno[] = [
-    { id: 1, nome: "Cauã Marcelo", disciplinas: [
+    {
+      id: 1,
+      nome: "Cauã Marcelo",
+      disciplinas: [
         { nome: "Artificial Intelligence & Chatbot", cp: 100 },
         { nome: "Building Relational Database", cp: 100 },
         { nome: "Computational Thinking Using Python", cp: 100 },
         { nome: "Domain Driven Design Using Java", cp: 100 },
-        { nome: "Front-End Design Engineering", cp: 100  },
-        { nome: "Software Engineering and Business Model", cp: 100  }
-    ]},
-    { id: 2, nome: "Gabriel Lima", disciplinas: [
-      { nome: "Artificial Intelligence & Chatbot", cp: 100 },
-      { nome: "Building Relational Database", cp: 100 },
-      { nome: "Computational Thinking Using Python", cp: 100 },
-      { nome: "Domain Driven Design Using Java", cp: 100 },
-      { nome: "Front-End Design Engineering", cp: 100  },
-      { nome: "Software Engineering and Business Model", cp: 100  }
-    ] },
-    { id: 3, nome: "Gustavo Borba", disciplinas: [
-      { nome: "Artificial Intelligence & Chatbot", cp: 100 },
-      { nome: "Building Relational Database", cp: 100 },
-      { nome: "Computational Thinking Using Python", cp: 100 },
-      { nome: "Domain Driven Design Using Java", cp: 100 },
-      { nome: "Front-End Design Engineering", cp: 100  },
-      { nome: "Software Engineering and Business Model", cp: 100  }
-    ] },
-    { id: 4, nome: "Leonardo Matheus", disciplinas: [
-      { nome: "Artificial Intelligence & Chatbot", cp: 100 },
-      { nome: "Building Relational Database", cp: 100 },
-      { nome: "Computational Thinking Using Python", cp: 100 },
-      { nome: "Domain Driven Design Using Java", cp: 100 },
-      { nome: "Front-End Design Engineering", cp: 100  },
-      { nome: "Software Engineering and Business Model", cp: 100  }
-    ] },
+        { nome: "Front-End Design Engineering", cp: 100 },
+        { nome: "Software Engineering and Business Model", cp: 100 },
+      ],
+    },
+    {
+      id: 2,
+      nome: "Gabriel Lima",
+      disciplinas: [
+        { nome: "Artificial Intelligence & Chatbot", cp: 100 },
+        { nome: "Building Relational Database", cp: 100 },
+        { nome: "Computational Thinking Using Python", cp: 100 },
+        { nome: "Domain Driven Design Using Java", cp: 100 },
+        { nome: "Front-End Design Engineering", cp: 100 },
+        { nome: "Software Engineering and Business Model", cp: 100 },
+      ],
+    },
+    {
+      id: 3,
+      nome: "Gustavo Borba",
+      disciplinas: [
+        { nome: "Artificial Intelligence & Chatbot", cp: 100 },
+        { nome: "Building Relational Database", cp: 100 },
+        { nome: "Computational Thinking Using Python", cp: 100 },
+        { nome: "Domain Driven Design Using Java", cp: 100 },
+        { nome: "Front-End Design Engineering", cp: 100 },
+        { nome: "Software Engineering and Business Model", cp: 100 },
+      ],
+    },
+    {
+      id: 4,
+      nome: "Leonardo Matheus",
+      disciplinas: [
+        { nome: "Artificial Intelligence & Chatbot", cp: 100 },
+        { nome: "Building Relational Database", cp: 100 },
+        { nome: "Computational Thinking Using Python", cp: 100 },
+        { nome: "Domain Driven Design Using Java", cp: 100 },
+        { nome: "Front-End Design Engineering", cp: 100 },
+        { nome: "Software Engineering and Business Model", cp: 100 },
+      ],
+    },
   ];
 
-
-
-
   const [alunos, setAlunos] = useState<Aluno[]>(alunosFixos);
-  const [nome, setNome] = useState('');
-  
+  const [nome, setNome] = useState("");
+
   const adicionarAluno = () => {
-    if (!nome) return; 
+    if (!nome) return;
 
     const novoAluno: Aluno = {
       id: alunos.length + 1,
       nome,
       disciplinas: [
-        { nome: "Artificial Intelligence & Chatbot", cp: Math.floor(Math.random() * 100) },
-        { nome: "Building Relational Database", cp: Math.floor(Math.random() * 100) },
-        { nome: "Computational Thinking Using Python", cp: Math.floor(Math.random() * 100) },
-        { nome: "Domain Driven Design Using Java", cp: Math.floor(Math.random() * 100) },
-        { nome: "Front-End Design Engineering", cp: Math.floor(Math.random() * 100) },
-        { nome: "Software Engineering and Business Model", cp: Math.floor(Math.random() * 100) }
-      ]
+        {
+          nome: "Artificial Intelligence & Chatbot",
+          cp: Math.floor(Math.random() * 100),
+        },
+        {
+          nome: "Building Relational Database",
+          cp: Math.floor(Math.random() * 100),
+        },
+        {
+          nome: "Computational Thinking Using Python",
+          cp: Math.floor(Math.random() * 100),
+        },
+        {
+          nome: "Domain Driven Design Using Java",
+          cp: Math.floor(Math.random() * 100),
+        },
+        {
+          nome: "Front-End Design Engineering",
+          cp: Math.floor(Math.random() * 100),
+        },
+        {
+          nome: "Software Engineering and Business Model",
+          cp: Math.floor(Math.random() * 100),
+        },
+      ],
     };
 
     setAlunos([...alunos, novoAluno]);
-    setNome(''); 
+    setNome("");
   };
 
   return (
@@ -103,9 +129,14 @@ export default function Cp() {
               </thead>
               <tbody>
                 {aluno.disciplinas.map((disciplina, index) => (
-                  <tr key={index} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                  <tr
+                    key={index}
+                    className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}
+                  >
                     <td className="px-4 py-2 border">{disciplina.nome}</td>
-                    <td className="px-4 py-2 border text-center">{disciplina.cp}</td>
+                    <td className="px-4 py-2 border text-center">
+                      {disciplina.cp}
+                    </td>
                   </tr>
                 ))}
               </tbody>
