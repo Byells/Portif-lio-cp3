@@ -2,9 +2,7 @@ import { store } from "@/db";
 import { EditarAlunoSchema } from "@/payloads/editar-aluno";
 import type { Aluno } from "@/types/types";
 import { isCuid } from "@paralleldrive/cuid2";
-// import { existsSync, promises as fs } from "fs";
 import { NextRequest, NextResponse } from "next/server";
-// import path from "path";
 import { safeParse } from "valibot";
 
 export const GET = async (_: NextRequest, ctx: { params: { id: string } }) => {
@@ -15,14 +13,7 @@ export const GET = async (_: NextRequest, ctx: { params: { id: string } }) => {
       { status: 404 },
     );
   }
-  // const caminho: string = path.join(process.cwd(), "database", "alunos.json");
   try {
-    // if (!existsSync(caminho)) {
-    //   await fs.writeFile(caminho, "[]");
-    // }
-    // const alunos: Aluno[] = JSON.parse(
-    //   await fs.readFile(caminho, { encoding: "utf8" }),
-    // );
     const { alunos } = store.getState();
     const aluno: Aluno | undefined = alunos.find((item) => item.id === id);
     if (!aluno) {
@@ -56,14 +47,7 @@ export const DELETE = async (
       { status: 404 },
     );
   }
-  // const caminho: string = path.join(process.cwd(), "database", "alunos.json");
   try {
-    // if (!existsSync(caminho)) {
-    //   await fs.writeFile(caminho, "[]");
-    // }
-    // const alunos: Aluno[] = JSON.parse(
-    //   await fs.readFile(caminho, { encoding: "utf8" }),
-    // );
     const { alunos, setAlunos } = store.getState();
     const novosAlunos = alunos.filter((al) => al.id !== id);
     setAlunos(novosAlunos);
@@ -95,14 +79,7 @@ export const PUT = async (req: Request, ctx: { params: { id: string } }) => {
       { status: 404 },
     );
   }
-  // const caminho: string = path.join(process.cwd(), "database", "alunos.json");
   try {
-    // if (!existsSync(caminho)) {
-    //   await fs.writeFile(caminho, "[]");
-    // }
-    // const alunos: Aluno[] = JSON.parse(
-    //   await fs.readFile(caminho, { encoding: "utf8" }),
-    // );
     const { alunos, setAlunos } = store.getState();
     const alunoIdx = alunos.findIndex((aluno) => aluno.id === id);
     if (alunoIdx === -1) {
@@ -124,7 +101,6 @@ export const PUT = async (req: Request, ctx: { params: { id: string } }) => {
       };
     });
     alunos[alunoIdx] = aluno;
-    // await fs.writeFile(caminho, JSON.stringify(alunos, null, 4));
     setAlunos(alunos);
     return NextResponse.json(null);
   } catch (e) {
