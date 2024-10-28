@@ -2,7 +2,7 @@
 import type { NotaKey } from "@/types/types";
 import { toast } from "sonner";
 import { Button } from "./ui/button";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import {
   Dialog,
   DialogClose,
