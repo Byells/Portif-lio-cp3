@@ -6,14 +6,14 @@
             {
                 "nome": "Artificial Intelligence & Chatbot",
                 "cs": 100,
-                "gs": 100,
-                "cp": 89.12
+                "gs": 98.5,
+                "cp": 100
             },
             {
                 "nome": "Building Relational Database",
                 "cs": 100,
-                "gs": 100,
-                "cp": 100.1
+                "gs": 97.8,
+                "cp": 99
             },
             {
                 "nome": "Computational Thinking Using Python",
@@ -30,14 +30,14 @@
             {
                 "nome": "Front-End Design Engineering",
                 "cs": 100,
-                "gs": 100,
-                "cp": 100
+                "gs": 98,
+                "cp": 80
             },
             {
                 "nome": "Software Engineering and Business Model",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
+                "cs": 90,
+                "gs": 91,
+                "cp": 80
             }
         ]
     },
@@ -48,7 +48,7 @@
             {
                 "nome": "Artificial Intelligence & Chatbot",
                 "cs": 100,
-                "gs": 100,
+                "gs": 89,
                 "cp": 100
             },
             {
@@ -60,25 +60,25 @@
             {
                 "nome": "Computational Thinking Using Python",
                 "cs": 100,
-                "gs": 100,
+                "gs": 96,
                 "cp": 96.5
             },
             {
                 "nome": "Domain Driven Design Using Java",
-                "cs": 100,
-                "gs": 100,
+                "cs": 98.5,
+                "gs": 93,
                 "cp": 100
             },
             {
                 "nome": "Front-End Design Engineering",
                 "cs": 100,
-                "gs": 100,
+                "gs": 96,
                 "cp": 60
             },
             {
                 "nome": "Software Engineering and Business Model",
                 "cs": 100,
-                "gs": 100,
+                "gs": 90,
                 "cp": 62.5
             }
         ]
@@ -89,39 +89,39 @@
         "disciplinas": [
             {
                 "nome": "Artificial Intelligence & Chatbot",
-                "cs": 100,
-                "gs": 100,
+                "cs": 99,
+                "gs": 85,
                 "cp": 100
             },
             {
                 "nome": "Building Relational Database",
                 "cs": 100,
-                "gs": 100,
+                "gs": 92,
                 "cp": 100
             },
             {
                 "nome": "Computational Thinking Using Python",
-                "cs": 100,
-                "gs": 100,
+                "cs": 98,
+                "gs": 95,
                 "cp": 100
             },
             {
                 "nome": "Domain Driven Design Using Java",
                 "cs": 100,
-                "gs": 100,
+                "gs": 91,
                 "cp": 100
             },
             {
                 "nome": "Front-End Design Engineering",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
+                "cs": 97,
+                "gs": 92,
+                "cp": 79
             },
             {
                 "nome": "Software Engineering and Business Model",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
+                "cs": 98,
+                "gs": 90,
+                "cp": 88
             }
         ]
     },
@@ -132,37 +132,37 @@
             {
                 "nome": "Artificial Intelligence & Chatbot",
                 "cs": 100,
-                "gs": 100,
+                "gs": 90,
                 "cp": 100
             },
             {
                 "nome": "Building Relational Database",
-                "cs": 100,
-                "gs": 100,
+                "cs": 98,
+                "gs": 95,
                 "cp": 100
             },
             {
                 "nome": "Computational Thinking Using Python",
                 "cs": 100,
-                "gs": 100,
-                "cp": 100
+                "gs": 97,
+                "cp": 93
             },
             {
                 "nome": "Domain Driven Design Using Java",
                 "cs": 100,
                 "gs": 100,
-                "cp": 100
+                "cp": 96
             },
             {
                 "nome": "Front-End Design Engineering",
-                "cs": 100,
-                "gs": 100,
-                "cp": 100
+                "cs": 95,
+                "gs": 89,
+                "cp": 88
             },
             {
                 "nome": "Software Engineering and Business Model",
-                "cs": 100,
-                "gs": 100,
+                "cs": 94,
+                "gs": 98,
                 "cp": 100
             }
         ]
