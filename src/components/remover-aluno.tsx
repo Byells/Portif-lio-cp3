@@ -27,7 +27,6 @@ export const RemoverAluno: React.FC<{ notaKey: NotaKey; alunoId: string }> = ({
       method: "DELETE",
     });
     if (res.ok && res.status === 200) {
-      // return redirect(`/${notaKey}`);
       return router.replace(`/${notaKey}`);
     }
     toast("Ops! Alguma coisa deu errado");
