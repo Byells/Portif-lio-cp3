@@ -116,7 +116,9 @@ export const POST = async (r: Request) => {
     //   ),
     // );
 
-    return NextResponse.redirect(new URL(`/${data.key}`, r.url));
+    return NextResponse.redirect(new URL(`/${data.key}`, r.url), {
+      status: 302,
+    });
   } catch (e) {
     if (e instanceof Error) {
       console.error(e);
