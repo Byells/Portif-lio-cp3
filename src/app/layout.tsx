@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/header";
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className="flex flex-col min-h-screen">
+        <Toaster />
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

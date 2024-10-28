@@ -41,8 +41,7 @@ export const POST = async (r: Request) => {
     //   await fs.readFile(caminho, { encoding: "utf8" }),
     // );
 
-    const { addNovoAluno, alunos } = store.getState();
-    console.log(alunos);
+    const { addNovoAluno } = store.getState();
     addNovoAluno({
       id: createId(),
       nome: data.nome,

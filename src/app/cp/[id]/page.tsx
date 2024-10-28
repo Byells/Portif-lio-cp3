@@ -1,5 +1,6 @@
 "use client";
 import { EditarAluno } from "@/components/editar-aluno";
+import { RemoverAluno } from "@/components/remover-aluno";
 import { Button } from "@/components/ui/button";
 import {
   Table,
@@ -72,6 +73,7 @@ const CpNotaId: NextPage<Props> = ({ params }) => {
           ))}
         </TableBody>
       </Table>
+      <RemoverAluno notaKey="cp" alunoId={aluno.id} />
     </div>
   );
 };

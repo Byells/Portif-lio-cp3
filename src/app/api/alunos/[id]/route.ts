@@ -45,6 +45,11 @@ export const DELETE = async (
   ctx: { params: { id: string } },
 ) => {
   const id = ctx.params.id;
+  const form = await req.formData();
+  const key = form.get("key") as string;
+  if (!["cp", "gs", "cs"].includes(key)) {
+    return NextResponse.json({ message: "payload inválido." }, { status: 400 });
+  }
   if (!id || !isCuid(id)) {
     return NextResponse.json(
       { message: "aluno não encontrado." },
@@ -59,7 +64,10 @@ export const DELETE = async (
     // const alunos: Aluno[] = JSON.parse(
     //   await fs.readFile(caminho, { encoding: "utf8" }),
     // );
-    //CONTINUAR
+    const { alunos, setAlunos } = store.getState();
+    const novosAlunos = alunos.filter((al) => al.id !== id);
+    setAlunos(novosAlunos);
+    return NextResponse.json(null);
   } catch (e) {
     if (e instanceof Error) {
       return new Response(String(e), { status: 500 });
