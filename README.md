@@ -8,10 +8,12 @@ O projeto está disponível em: [portifolio-cp3.vercel.app](https://portifolio-c
 
 ## Integrantes
 
-- Cauã Marcelo da Silva Machado RM: 558024
-- Gabriel Lima Silva RM: 556773
-- Gustavo Patrício Borba RM: 559202
-- Leonardo Matheus Teixeira RM: 556629
+|         Nome                  |   RM   | Turma  |
+| ----------------------------- | ------ | ------ |
+| Cauã Marcelo da Silva Machado | 558024 | 1TDSPW |
+| Gabriel Lima Silva            | 556773 | 1TDSPW |
+| Gustavo Patrício Borba        | 559202 | 1TDSPW |
+| Leonardo Matheus Teixeira     | 556629 | 1TDSPW |
 
 
 ## Portfólio
